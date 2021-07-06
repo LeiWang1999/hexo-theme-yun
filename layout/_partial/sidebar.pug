@@ -51,6 +51,7 @@ aside.sidebar
 
 
     hr(style="margin-bottom:0.5rem")
+    p(style="margin:0.5em 0em 0.1em 0em") <font size="1.5" color="gray">联系我</font>
     if theme.social
       .links-of-author
         for social in theme.social
@@ -59,6 +60,7 @@ aside.sidebar
           a.links-of-author-item.hty-icon-button(rel='noopener' href=social.link, title=social.name, target='_blank' style='color:' + social.color)
             +icon(social.icon)
 
+    p(style="margin:0.5em 0em 0.1em 0em") <font size="1.5" color="gray">常用的链接</font>
     if theme.pages
       hr(style="margin:0.5rem 1rem")
       .links
