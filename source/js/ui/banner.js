@@ -26,18 +26,17 @@ function generateBanner(title) {
     const char = title[i];
     let charBox = document.createElement("div");
     let rn = random(1.5, 3.5);
-    charBox.innerHTML = "<span class='char'>" + char + "</span>";
-    let charSize = rn + "rem";
+    charBox.innerHTML = "<h1>" + char + "</h1>";
     banner.insertBefore(charBox, lineBottom);
     charBox.classList.add("char-box");
-    if (i % 2 === 0) {
-      charBox.classList.add("char-left");
-      charBox.style.animationName = "char-move-left";
-    } else {
-      charBox.classList.add("char-right");
-      charBox.style.animationName = "char-move-right";
-    }
-    charBox.style.setProperty("--banner-char-size", charSize);
+    // if (i % 2 === 0) {
+    //   charBox.classList.add("char-left");
+    //   charBox.style.animationName = "char-move-left";
+    // } else {
+    //   charBox.classList.add("char-right");
+    //   charBox.style.animationName = "char-move-right";
+    // }
+    // charBox.style.setProperty("--banner-char-size", charSize);
 
     const width = window
       .getComputedStyle(document.getElementsByClassName("char-box")[i])
@@ -46,7 +45,7 @@ function generateBanner(title) {
 
     sumH += rn;
   }
-  let height = "calc(50vh - " + sumH / 2 + "rem)";
+  let height = "calc(45vh - " + sumH / 2 + "rem)";
   lineTop.style.setProperty("--banner-line-height", height);
   lineBottom.style.setProperty("--banner-line-height", height);
 
