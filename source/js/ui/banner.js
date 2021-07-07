@@ -25,7 +25,8 @@ function generateBanner(title) {
   for (let i = 0; i < title.length; i++) {
     const char = title[i];
     let charBox = document.createElement("div");
-    let rn = random(1.5, 3.5);
+    // let rn = random(1.5, 3.5);
+    let rn = 2;
     charBox.innerHTML = "<h1>" + char + "</h1>";
     banner.insertBefore(charBox, lineBottom);
     charBox.classList.add("char-box");
@@ -45,7 +46,8 @@ function generateBanner(title) {
 
     sumH += rn;
   }
-  let height = "calc(45vh - " + sumH / 2 + "rem)";
+  let height = "calc(44vh - " + sumH / 2 + "rem)";
+
   lineTop.style.setProperty("--banner-line-height", height);
   lineBottom.style.setProperty("--banner-line-height", height);
 
